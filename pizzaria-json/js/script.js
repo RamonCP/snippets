@@ -15,5 +15,6 @@ $(document).ready(function(){
 
  	carregaCardapio();
 console.log('ok')
+console.log('teste')
 
 })
