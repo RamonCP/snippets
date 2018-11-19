@@ -1,9 +1,9 @@
-$(document).ready(function(){ 
+$(document).ready(() => { 
 
 
 	function carregaCardapio(){
 		var div = "";
-		$.getJSON('json/pizzas.json', function(data) {
+		$.getJSON('json/entradas.json', function(data) {
 			$.each(data, function(key, value) {
 				console.log(value.unidades);
 
@@ -23,12 +23,17 @@ $(document).ready(function(){
 		});
     }
 
- //    $(window).load( function(){
- //    	console.log('ok')
- //    })
+
+    function carregaPizza(){
+    	var div = "";
+    	$.getJSON('json/pizzas.json', (data) => {
+    		$.each(data, (key, value) => {
+    			console.log(value.nome);
+    		})
+    	}) 
+    }
 
  	carregaCardapio();
-console.log('ok')
-console.log('teste')
+ 	carregaPizza();
 
 })
