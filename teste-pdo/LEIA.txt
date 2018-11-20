@@ -1,0 +1,4 @@
+Fiz alguns com pdo com esse exemplo de "sistema"
+Ainda não está acabado todos os testes que tenho que fazer 
+Para acessar o painel basta digitar /painel na url e inserir 
+o usuario ramon@gmail.com e senha 123456
