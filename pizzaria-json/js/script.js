@@ -1,9 +1,8 @@
 $(document).ready(() => { 
 
-
-	function carregaCardapio(){
+	function carregaCardapio(arquivo){
 		var div = "";
-		$.getJSON('json/entradas.json', function(data) {
+		$.getJSON('json/'+ arquivo +'.json', function(data) {
 			$.each(data, function(key, value) {
 				console.log(value.unidades);
 
@@ -17,23 +16,16 @@ $(document).ready(() => {
 				div += "<p id='description'>" + value.descricao + "</p>";
 				div += "</div></div>";
 
-
 				$('.content').html(div);
 			});
 		});
     }
 
+    $('.list ul li a').on("click", () =>{
+    	var link = $(this).data("link");
+    	carregaCardapio(link);
+    })
 
-    function carregaPizza(){
-    	var div = "";
-    	$.getJSON('json/pizzas.json', (data) => {
-    		$.each(data, (key, value) => {
-    			console.log(value.nome);
-    		})
-    	}) 
-    }
-
- 	carregaCardapio();
- 	carregaPizza();
+ 	carregaCardapio("entradas");
 
 })

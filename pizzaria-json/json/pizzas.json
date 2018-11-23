@@ -1,13 +1,13 @@
 [
 	{
 		"nome":"Mussarela",
-		"imagem":"../images/PizzaMussarela.png",
+		"imagem":"images/PizzaMussarela.png",
 		"descricao":"A incomparável mussarela Pizza Hut, servida sobre molho de tomate especial.",
 		"preco":"69,90"
 	},
 	{
 		"nome":"Calabresa",
-		"imagem":"../images/PizzaCalabresa.png",
+		"imagem":"images/PizzaCalabresa.png",
 		"descricao":"Deliciosas fatias de calabresa, acompanhadas de cebola, azeitonas verdes e mussarela especial Pizza Hut.",
 		"preco":"69,90"
 	}	
