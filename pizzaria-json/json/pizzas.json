@@ -9,6 +9,43 @@
 		"nome":"Calabresa",
 		"imagem":"images/PizzaCalabresa.png",
 		"descricao":"Deliciosas fatias de calabresa, acompanhadas de cebola, azeitonas verdes e mussarela especial Pizza Hut.",
-		"preco":"69,90"
-	}	
+		"preco":"69,90",
+		"valor":"69.90"
+	},
+	{
+		"nome":"Portuguesa",
+		"imagem":"images/PizzaPortuguesa.png",
+		"descricao":"Presunto especial acompanhado de cebola e azeitonas verdes, coberto pela exclusiva mussarela Pizza Hut.",
+		"preco":"69,90",
+		"valor":"69.90"
+	},
+	{
+		"nome":"Margherita",
+		"imagem":"images/PizzaMargherita.png",
+		"descricao":"Mussarela, manjericão, tomates selecionados e queijo parmesão.",
+		"preco":"69,90",
+		"valor":"69.90"
+	},
+	{
+		"nome":"CornBacon",
+		"imagem":"images/PizzaCornBacon.png",
+		"descricao":"Mussarela, fatias do melhor bacon e milho selecionado.",
+		"preco":"69,90",
+		"valor":"69.90"
+	},
+	{
+		"nome":"Vegetariana",
+		"imagem":"images/PizzaVegetariana.png",
+		"descricao":"Saborosa combinção de mussarela, tomates selecionados, champignon, pimentão, cebola e azeitonas verdes.",
+		"preco":"69,90",
+		"valor":"69.90"
+	},
+	{
+		"nome":"Margherita",
+		"imagem":"images/PizzaMargherita.png",
+		"descricao":"Mussarela, manjericão, tomates selecionados e queijo parmesão.",
+		"preco":"69,90",
+		"valor":"69.90"
+	}
+
 ]
