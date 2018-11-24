@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 body{ background: url(../images/background.jpg); font-family: 'Roboto', sans-serif;;background-size: cover;background-attachment: fixed; }
+ul { list-style: none; } 
 
 header { background: rgba(0,0,0,.7); margin-bottom: 94px; }
 header a { text-transform: uppercase; color: #898989; font-size: 11px; font-weight: bolder; margin-right: 15px; }
@@ -8,7 +9,6 @@ header h1 { color: #898989; font-style: italic; font-weight: bold; }
 header .price a { text-decoration: none; font-size: 22px; } 
 header .price a span.count { background: #ed1c24; border-radius: 100%; padding: 0px 6px; color: #fff; font-size: 15px; position: absolute; left: 35px; top: 5px; }
 
-.list ul { list-style: none; }
 .list ul li { float: left; }
 .list ul li a { font-weight: bold; text-decoration: none; color: #fff; background: rgba(0,0,0,.5); padding: 20px 43px; text-transform: uppercase; font-size: 15px;}
 .list ul li:first-child a{ border-top-left-radius: 8px; border-bottom-left-radius: 8px; }
@@ -21,3 +21,14 @@ header .price a span.count { background: #ed1c24; border-radius: 100%; padding: 
 .product .info p { font-size: 14px; }
 .product .image img { width: 150px; height: 150px; }
 .product .info button { font-size: 15px; }
+
+.content .form-login { background: rgba(0,0,0,.7); width: 60%; margin: 0 auto; padding: 20px 43px;color: #fff; }
+.content .form-login input { border-radius: 0; }
+.content .form-login a { color: #e6c200; font-size: 13px; }
+
+footer { background: rgba(0,0,0,.7); }
+footer a { text-decoration: none; color: #898989; font-size: 17px; }
+footer a:hover { color: #e6c200; } 
+footer h5 { color: #898989; font-size: 17px; font-weight: 400; }
+footer p { font-size: 12px; }
+footer hr { border: none; height: 1px; background: #000; background: -webkit-gradient(radial,50% 50%,0,50% 50%,666,from(#666),to(transparent)) }

@@ -9,7 +9,7 @@ $(function(){
 				div += "<div class='product'>";
 				div += "<div class='image'>";
 				div += "<img src="+ value.imagem +">";
-				div += "<h3 id='price' class='mt-4 text-center' data-value="+ value.valor +">R$ " + value.preco + "</h3>";
+				div += "<h3 id='price' class='mt-4 text-center' data-value="+ value.valor +">R$ " + value.valor.replace('.', ',') + "</h3>";
 				div += "</div>";
 				div += "<div class='info'>";
 				div += "<h4 id='title'>" + value.nome + "</h4>";
@@ -36,7 +36,7 @@ $(function(){
 
 
 
-    // Events
+    // =================== Events ======================= //
     $('.list ul li a').click(function(){
     	var link = $(this).data("link");
     	$('.list ul li a').removeClass('active');
@@ -47,10 +47,16 @@ $(function(){
     // on para capturar o evento de um elemento que não foi carregado com o dom
     $('.content').on("click", "button", function(){
     	var cont = 0;
-    	var price = $(this).parents('.info').siblings('.image').find('h3').data('value')
+    	var price = $(this).parents('.info').siblings('.image').find('h3').data('value');
  
-    	addCheckout(price, $('.price a').data('price'), $('.price a span.count').data('value'))
+    	addCheckout(price, $('.price a').data('price'), $('.price a span.count').data('value'));
     });
+
+    $('.login').on("click", function(){
+    	$.post("login.html", function(data){
+    		$('.content').html(data);
+    	})
+    })
 
 
  	
