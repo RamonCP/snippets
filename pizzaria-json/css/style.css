@@ -6,7 +6,7 @@ header a { text-transform: uppercase; color: #898989; font-size: 11px; font-weig
 header a:hover { color: #898989; }
 header h1 { color: #898989; font-style: italic; font-weight: bold; }
 header .price a { text-decoration: none; font-size: 22px; } 
-
+header .price a span.count { background: #ed1c24; border-radius: 100%; padding: 0px 6px; color: #fff; font-size: 15px; position: absolute; left: 35px; top: 5px; }
 
 .list ul { list-style: none; }
 .list ul li { float: left; }

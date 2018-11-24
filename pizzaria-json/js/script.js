@@ -22,15 +22,15 @@ $(function(){
 		});
     }
 
-    function addCheckout(valor){
-    	// var price_old = parseFloat($('.price a').data('price'));
-    	// $('.price a').attr('data-price',price_old + valor)
+    function addCheckout(valor, valor_old, count){    
+    	var total = parseFloat(valor_old) + parseFloat(valor);
+    	var count_tot = parseInt(count) + 1;
 
-    	var total = parseFloat($('.price a').data('price')).trigger('refresh') + valor;
+    	$('.price a').data('price', parseFloat(total).toFixed(2));
+    	$('.price a span.count').data('value', parseInt(count) + 1);
 
-    	// $('.price a').html("R$ "+ total); 
-    	console.log(parseFloat(total))
-
+    	$('.price a span.count').html(count_tot)
+    	$('.price a span.price').html("R$ "+ parseFloat(total).toFixed(2).replace('.', ',')); 
     }
 
 
@@ -41,14 +41,15 @@ $(function(){
     	var link = $(this).data("link");
     	$('.list ul li a').removeClass('active');
     	$(this).addClass('active');
-    	carregaCardapio(link);
+     	carregaCardapio(link);
     });
 
     // on para capturar o evento de um elemento que não foi carregado com o dom
     $('.content').on("click", "button", function(){
+    	var cont = 0;
     	var price = $(this).parents('.info').siblings('.image').find('h3').data('value')
-    	// console.log(price)
-    	addCheckout(price)
+ 
+    	addCheckout(price, $('.price a').data('price'), $('.price a span.count').data('value'))
     });
 
 
