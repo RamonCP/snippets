@@ -37,6 +37,7 @@ $(function(){
        	var cont = 0;
     	$.each($(elemento), function(key, value){
     		if ($(this).val() == "") { 
+    			console.log(key, value.name)
     			cont++;
     		}
     	})
