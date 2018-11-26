@@ -3,7 +3,7 @@ $(function(){
 
 	// Functions
 	function carregaCardapio(arquivo){
-		var div = "";
+		let div = "";
 		$.getJSON('json/'+ arquivo +'.json', function(data) {
 			$.each(data, function(key, value) {
 				div += "<div class='product'>";
@@ -23,8 +23,8 @@ $(function(){
     }
 
     function addCheckout(valor, valor_old, count){    
-    	var total = parseFloat(valor_old) + parseFloat(valor);
-    	var count_tot = parseInt(count) + 1;
+    	let total = parseFloat(valor_old) + parseFloat(valor);
+    	let count_tot = parseInt(count) + 1;
 
     	$('.price a').data('price', parseFloat(total).toFixed(2));
     	$('.price a span.count').data('value', parseInt(count) + 1);
@@ -33,12 +33,21 @@ $(function(){
     	$('.price a span.price').html("R$ "+ parseFloat(total).toFixed(2).replace('.', ',')); 
     }
 
+    $('form').submit(function(e){
+    	e.preventDefault();
+    	let tab1 = $('#tab1');
+    	let tab2 = $('#tab2');
+    	let tab3 = $('#tab3');
+
+    	console.log(tab1, tab2, tab3)
+    })
+
 
 
 
     // =================== Events ======================= //
     $('.list ul li a').click(function(){
-    	var link = $(this).data("link");
+    	let link = $(this).data("link");
     	$('.list ul li a').removeClass('active');
     	$(this).addClass('active');
      	carregaCardapio(link);
@@ -46,14 +55,15 @@ $(function(){
 
     // on para capturar o evento de um elemento que não foi carregado com o dom
     $('.content').on("click", "button", function(){
-    	var cont = 0;
-    	var price = $(this).parents('.info').siblings('.image').find('h3').data('value');
+    	let cont = 0;
+    	let price = $(this).parents('.info').siblings('.image').find('h3').data('value');
  
     	addCheckout(price, $('.price a').data('price'), $('.price a span.count').data('value'));
     });
 
-    $('.login').on("click", function(){
-    	$.post("login.html", function(data){
+    $('header a').on("click", function(){
+    	let link = $(this).data('src');
+    	$.post(link+".html", function(data){
     		$('.content').html(data);
     	})
     })
