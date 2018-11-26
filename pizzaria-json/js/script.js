@@ -1,8 +1,7 @@
 $(function(){ 
-	carregaCardapio("entradas");
 
 	// Functions
-	function carregaCardapio(arquivo) {
+	let carregaCardapio = function (arquivo) {
 		let div = "";
 		$.getJSON('json/'+ arquivo +'.json', function(data) {
 			$.each(data, function(key, value) {
@@ -22,7 +21,7 @@ $(function(){
 		});
     }
 
-    function addCheckout(valor, valor_old, count) {    
+    let addCheckout = function (valor, valor_old, count) {    
     	let total = parseFloat(valor_old) + parseFloat(valor);
     	let count_tot = parseInt(count) + 1;
 
@@ -33,14 +32,21 @@ $(function(){
     	$('.price a span.price').html("R$ "+ parseFloat(total).toFixed(2).replace('.', ',')); 
     }
 
-    $('.content').on("submit", "form", function(e) {
-    	e.preventDefault();
-    	let tab1 = $('#tab1');
-    	let tab2 = $('#tab2');
-    	let tab3 = $('#tab3');
 
-    	console.log(tab1, tab2, tab3)
-    })
+    let validaInput = function (elemento) {
+       	var cont = 0;
+    	$.each($(elemento), function(key, value){
+    		if ($(this).val() == "") { 
+    			cont++;
+    		}
+    	})
+
+    	if (cont > 0) {    		
+    		return false;
+    	} else {    
+    		return true;
+    	}
+    }
 
 
 
@@ -69,5 +75,24 @@ $(function(){
     })
 
 
- 	
+  	$('.content').on("submit", "form", function(e) {
+		e.preventDefault();
+		if(validaInput("#tab1 input")) {
+			alert("Step 1: Concluido com sucesso")
+
+			if(validaInput("#tab2 input")) {
+				alert("Step 2: Concluido com sucesso")
+			} else {
+				alert("Step 2: Não concluido com sucesso")
+			}
+		} else {
+			alert("Step 1: Não concluido com sucesso")
+		}
+
+	})
+
+
+
+  	// Call Functions
+	carregaCardapio("entradas"); 	
 })
