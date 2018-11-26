@@ -1,7 +1,7 @@
 <h3 class="text-white text-center mb-4">Crie uma conta para fazer seu pedido mais rápido e conferir ofertas</h3>
 <form class="form-criar-conta" method="post">
 
-	<!-- <div class="form-navigation">
+	<div class="form-navigation">
 		<a data-toggle="collapse" href="#tab1" role="button" aria-expanded="false" aria-controls="tab1"><span>1</span>Conte-nos sobre você</a>
 		<div class="tab-content collapse show" data-id="1" id="tab1">
 			<div class="form-group">
@@ -37,7 +37,7 @@
 		 	<button type="submit" class="btn btn-warning text-uppercase font-weight-bold py-2 px-5">Continue</button>
 		</div> 	
 	</div>
- -->
+
 	<div class="form-navigation">
 		<a data-toggle="collapse" href="#tab2" role="button" aria-expanded="false" aria-controls="tab2"><span>2</span>Insira sua localização</a>
 		<div class="tab-content collapse disabled" data-id="2" id="tab2">
@@ -50,24 +50,24 @@
 		 	<div class="form-group">
 		    	<label>Endereço:</label>
 		    	<div>
-			    	<input type="text" class="form-control col-sm-7 d-inline-block mr-3" id="rua" name="rua" placeholder="Rua">
-			    	<input type="text" class="form-control col-sm-3 d-inline-block" id="numero" name="numero" placeholder="Número">
+			    	<input type="text" class="form-control col-sm-7 d-inline-block mr-3 localidade" id="rua" name="rua" placeholder="Rua">
+			    	<input type="text" class="form-control col-sm-3 d-inline-block localidade" id="numero" name="numero" placeholder="Número">
 			    	<div class="msg" role="alert">Insira seu endereço</div>
 		    	</div>
 		 	</div>
 
 		 	<div class="form-group">
-		    	<input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade">
+		    	<input type="text" class="form-control localidade" id="cidade" name="cidade" placeholder="Cidade">
 		    	<div class="msg" role="alert">Insira sua cidade</div>
 		 	</div>
 
 		 	<div class="form-group">
-		    	<input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro">
+		    	<input type="text" class="form-control localidade" id="bairro" name="bairro" placeholder="Bairro">
 		    	<div class="msg" role="alert">Insira seu bairro</div>
 		 	</div>
 
 		 	<div class="form-group">
-		    	<input type="text" class="form-control" id="estado" name="estado" placeholder="Estado">
+		    	<input type="text" class="form-control localidade" id="estado" name="estado" placeholder="Estado">
 		    	<div class="msg" role="alert">Insira seu estado</div>
 		 	</div>
 

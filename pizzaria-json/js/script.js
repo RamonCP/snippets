@@ -105,25 +105,26 @@ $(function(){
 	})
 
 
-	$('.content').on("keyup", "#cep", function(){
-		console.log($(this).val())
+	// $('.content').on("blur", "#cep", function(){
+	// 	$('#tab2 input.localidade').val('...')
+	// })	
+
+	$('.content').on("blur", "#cep", function(){
+
+		$.get('https://viacep.com.br/ws/'+$(this).val()+'/json/', function(data){
+		
+			$('#rua').val(data.logradouro)
+			$('#numero').val(data.complemento)
+			$('#cidade').val(data.localidade)
+			$('#bairro').val(data.bairro)
+			$('#estado').val(data.uf)
+			console.log(data)
+		})
+
+		// console.log($(this).val())
 	})
 
-		// if(validaInput("#tab2 input")) {
-		// 	alert("Step 2: Concluido com sucesso")
-
-		// 	$("#tab3").addClass("show");
-
-		// } else {
-		// 	alert("Step 2: Não concluido com sucesso")
-		// }	
-
-
-		// if(validaInput("#tab3 input")) {
-		// 	alert("Step 3: Concluido com sucesso")
-		// } else {
-		// 	alert("Step 3: Não concluido com sucesso")
-		// }
+		
 
 	
 
