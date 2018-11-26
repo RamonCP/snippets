@@ -2,7 +2,7 @@ $(function(){
 	carregaCardapio("entradas");
 
 	// Functions
-	function carregaCardapio(arquivo){
+	function carregaCardapio(arquivo) {
 		let div = "";
 		$.getJSON('json/'+ arquivo +'.json', function(data) {
 			$.each(data, function(key, value) {
@@ -22,7 +22,7 @@ $(function(){
 		});
     }
 
-    function addCheckout(valor, valor_old, count){    
+    function addCheckout(valor, valor_old, count) {    
     	let total = parseFloat(valor_old) + parseFloat(valor);
     	let count_tot = parseInt(count) + 1;
 
@@ -33,7 +33,7 @@ $(function(){
     	$('.price a span.price').html("R$ "+ parseFloat(total).toFixed(2).replace('.', ',')); 
     }
 
-    $('form').submit(function(e){
+    $('.content').on("submit", "form", function(e) {
     	e.preventDefault();
     	let tab1 = $('#tab1');
     	let tab2 = $('#tab2');
@@ -46,7 +46,7 @@ $(function(){
 
 
     // =================== Events ======================= //
-    $('.list ul li a').click(function(){
+    $('.list ul li a').click(function() {
     	let link = $(this).data("link");
     	$('.list ul li a').removeClass('active');
     	$(this).addClass('active');
@@ -54,14 +54,14 @@ $(function(){
     });
 
     // on para capturar o evento de um elemento que não foi carregado com o dom
-    $('.content').on("click", "button", function(){
+    $('.content').on("click", "button", function() {
     	let cont = 0;
     	let price = $(this).parents('.info').siblings('.image').find('h3').data('value');
  
     	addCheckout(price, $('.price a').data('price'), $('.price a span.count').data('value'));
     });
 
-    $('header a').on("click", function(){
+    $('header a').on("click", function() {
     	let link = $(this).data('src');
     	$.post(link+".html", function(data){
     		$('.content').html(data);
