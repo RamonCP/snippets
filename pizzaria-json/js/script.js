@@ -104,32 +104,19 @@ $(function(){
 		$(this).parents('.form-group').find('.msg').removeClass('active')
 	})
 
-
-	// $('.content').on("blur", "#cep", function(){
-	// 	$('#tab2 input.localidade').val('...')
-	// })	
-
 	$('.content').on("blur", "#cep", function(){
 
 		$.get('https://viacep.com.br/ws/'+$(this).val()+'/json/', function(data){
-		
 			$('#rua').val(data.logradouro)
 			$('#numero').val(data.complemento)
 			$('#cidade').val(data.localidade)
 			$('#bairro').val(data.bairro)
 			$('#estado').val(data.uf)
-			console.log(data)
 		})
 
-		// console.log($(this).val())
 	})
 
 		
-
-	
-
-
-
   	// Call Functions
 	carregaCardapio("entradas"); 	
 })
