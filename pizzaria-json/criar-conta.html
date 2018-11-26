@@ -1,69 +1,80 @@
 <h3 class="text-white text-center mb-4">Crie uma conta para fazer seu pedido mais rápido e conferir ofertas</h3>
 <form class="form-criar-conta" method="post">
 
-	<div class="form-navigation">
+	<!-- <div class="form-navigation">
 		<a data-toggle="collapse" href="#tab1" role="button" aria-expanded="false" aria-controls="tab1"><span>1</span>Conte-nos sobre você</a>
 		<div class="tab-content collapse show" data-id="1" id="tab1">
 			<div class="form-group">
 		    	<label for="nome">Nome:</label>
 		    	<input type="text" class="form-control nome" id="nome" name="nome" placeholder="Insira seu nome">
-		    	<div class="alert alert-danger" role="alert">Insira seu nome</div>
+		    	<div class="msg" role="alert">Insira seu nome</div>
 		 	</div>
 
 		 	<div class="form-group">
 		    	<label for="tel">Telefone:</label>
 		    	<input type="tel" class="form-control phone" id="tel" name="phone" placeholder="Insira seu telefone">
-		    	<div class="alert alert-danger" role="alert">Insira seu telefone</div>
+		    	<div class="msg" role="alert">Insira seu telefone</div>
 		 	</div>
 
 		 	<div class="form-group">
 		    	<label for="email">Email:</label>
 		    	<input type="email" class="form-control email" id="email" name="email" placeholder="Insira email">
-		    	<div class="alert alert-danger" role="alert">Insira seu email</div>
+		    	<div class="msg" role="alert">Insira seu email</div>
 		 	</div>
 
 		 	<div class="form-group">
 		    	<label for="confirmEmail">Confirme seu email:</label>
 		    	<input type="email" class="form-control confirmEmail" id="confirmEmail" name="confirmEmail" placeholder="Confirma seu email">
-		    	<div class="alert alert-danger" role="alert">Confirme seu email</div>
+		    	<div class="msg" role="alert">Confirme seu email</div>
 		 	</div>
 
 		 	<div class="form-group">
 		    	<label for="cpf">CPF:</label>
 		    	<input type="text" class="form-control cpf" id="cpf" name="cpf" placeholder="Insira seu CPF">
-		    	<div class="alert alert-danger" role="alert">Insira seu nome</div>
+		    	<div class="msg" role="alert">Insira seu cpf</div>
 		 	</div>
 
 		 	<button type="submit" class="btn btn-warning text-uppercase font-weight-bold py-2 px-5">Continue</button>
 		</div> 	
 	</div>
-
+ -->
 	<div class="form-navigation">
 		<a data-toggle="collapse" href="#tab2" role="button" aria-expanded="false" aria-controls="tab2"><span>2</span>Insira sua localização</a>
-		<div class="tab-content collapse" data-id="2" id="tab2">
+		<div class="tab-content collapse disabled" data-id="2" id="tab2">
 			<div class="form-group">
-		    	<label for="nome">Nome:</label>
-		    	<input type="text" class="form-control" id="nome" name="nome" placeholder="Insira seu nome">
+		    	<label for="cep">CEP:</label>
+		    	<input type="text" class="form-control col-sm-3" id="cep" name="cep" placeholder="Insira seu CEP">
+		    	<div class="msg" role="alert">Insira seu CEP</div>
 		 	</div>
 
 		 	<div class="form-group">
-		    	<label for="tel">Telefone:</label>
-		    	<input type="tel" class="form-control" id="tel" name="phone" placeholder="Insira seu telefone">
+		    	<label>Endereço:</label>
+		    	<div>
+			    	<input type="text" class="form-control col-sm-7 d-inline-block mr-3" id="rua" name="rua" placeholder="Rua">
+			    	<input type="text" class="form-control col-sm-3 d-inline-block" id="numero" name="numero" placeholder="Número">
+			    	<div class="msg" role="alert">Insira seu endereço</div>
+		    	</div>
 		 	</div>
 
 		 	<div class="form-group">
-		    	<label for="email">Email:</label>
-		    	<input type="email" class="form-control" id="email" name="email" placeholder="Insira email">
+		    	<input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade">
+		    	<div class="msg" role="alert">Insira sua cidade</div>
 		 	</div>
 
 		 	<div class="form-group">
-		    	<label for="confirmEmail">Confirme seu email:</label>
-		    	<input type="text" class="form-control" id="confirmEmail" name="" placeholder="Confirma seu email">
+		    	<input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro">
+		    	<div class="msg" role="alert">Insira seu bairro</div>
 		 	</div>
 
 		 	<div class="form-group">
-		    	<label for="cpf">CPF:</label>
-		    	<input type="text" class="form-control" id="cpf" name="cpf" placeholder="Insira seu CPF">
+		    	<input type="text" class="form-control" id="estado" name="estado" placeholder="Estado">
+		    	<div class="msg" role="alert">Insira seu estado</div>
+		 	</div>
+
+		 	<div class="form-group">
+		    	<label for="complemento">Complemento:</label>
+		    	<input type="text" class="form-control" id="complemento" name="complemento" placeholder="Complemento">
+		    	<div class="msg" role="alert">Insira um complemento</div>
 		 	</div>
 
 		 	<button type="submit" class="btn btn-warning text-uppercase font-weight-bold py-2 px-5">Continue</button>
@@ -72,31 +83,20 @@
 
 	<div class="form-navigation">
 		<a data-toggle="collapse" href="#tab3" role="button" aria-expanded="false" aria-controls="tab3"><span>3</span>Proteja sua conta</a>
-		<div class="tab-content collapse" data-id="3" id="tab3">
+		<div class="tab-content collapse disabled" data-id="3" id="tab3">
 			<div class="form-group">
-		    	<label for="nome">Nome:</label>
-		    	<input type="text" class="form-control" id="nome" name="nome" placeholder="Insira seu nome">
+		    	<label for="senha">Senha:</label>
+		    	<input type="text" class="form-control" id="senha" name="senha" placeholder="Insira sua senha">
+		    	<div class="msg" role="alert">Insira uma senha</div>
 		 	</div>
 
 		 	<div class="form-group">
-		    	<label for="tel">Telefone:</label>
-		    	<input type="tel" class="form-control" id="tel" name="phone" placeholder="Insira seu telefone">
+		    	<label for="confirmSenha">Confirme sua senha:</label>
+		    	<input type="text" class="form-control" id="confirmSenha" name="confirmSenha" placeholder="Confirme sua senha">
+		    	<div class="msg" role="alert">Insira uma senha</div>
 		 	</div>
 
-		 	<div class="form-group">
-		    	<label for="email">Email:</label>
-		    	<input type="email" class="form-control" id="email" name="email" placeholder="Insira email">
-		 	</div>
-
-		 	<div class="form-group">
-		    	<label for="confirmEmail">Confirme seu email:</label>
-		    	<input type="text" class="form-control" id="confirmEmail" name="" placeholder="Confirma seu email">
-		 	</div>
-
-		 	<div class="form-group">
-		    	<label for="cpf">CPF:</label>
-		    	<input type="text" class="form-control" id="cpf" name="cpf" placeholder="Insira seu CPF">
-		 	</div>
+		
 
 		 	<button type="submit" class="btn btn-warning text-uppercase font-weight-bold py-2 px-5">Continue</button>
 		</div> 	

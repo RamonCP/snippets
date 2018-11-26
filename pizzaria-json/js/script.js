@@ -37,7 +37,8 @@ $(function(){
        	var cont = 0;
     	$.each($(elemento), function(key, value){
     		if ($(this).val() == "") { 
-    			console.log(key, value.name)
+    			// console.log(key, value.name, $(this).parents('.form-group').find('.msg'))
+    			$(this).parents('.form-group').find('.msg').addClass('active')
     			cont++;
     		}
     	})
@@ -76,21 +77,55 @@ $(function(){
     })
 
 
-  	$('.content').on("submit", "form", function(e) {
+  	$('.content').on("click", "#tab1 button", function(e) {
 		e.preventDefault();
 		if(validaInput("#tab1 input")) {
-			alert("Step 1: Concluido com sucesso")
-
-			if(validaInput("#tab2 input")) {
-				alert("Step 2: Concluido com sucesso")
-			} else {
-				alert("Step 2: Não concluido com sucesso")
-			}
-		} else {
-			alert("Step 1: Não concluido com sucesso")
+			$("#tab2").addClass("show").addClass('active');
+			$("#tab1").removeClass("show").addClass('disabled');
 		}
+	})	
 
+	$('.content').on("click", "#tab2 button", function(e) {
+		e.preventDefault();
+		if(validaInput("#tab2 input")) {
+			$("#tab3").addClass("show").addClass('active');
+			$("#tab2").removeClass("show").removeClass('active');
+		}
+	})	
+
+	$('.content').on("click", "#tab3 button", function(e) {
+		e.preventDefault();
+		if(validaInput("#tab3 input")) {
+			console.log($('form').serialize())
+		}
+	})	
+
+	$('.content').on("keyup", "input", function(){
+		$(this).parents('.form-group').find('.msg').removeClass('active')
 	})
+
+
+	$('.content').on("keyup", "#cep", function(){
+		console.log($(this).val())
+	})
+
+		// if(validaInput("#tab2 input")) {
+		// 	alert("Step 2: Concluido com sucesso")
+
+		// 	$("#tab3").addClass("show");
+
+		// } else {
+		// 	alert("Step 2: Não concluido com sucesso")
+		// }	
+
+
+		// if(validaInput("#tab3 input")) {
+		// 	alert("Step 3: Concluido com sucesso")
+		// } else {
+		// 	alert("Step 3: Não concluido com sucesso")
+		// }
+
+	
 
 
 
