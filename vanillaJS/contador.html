@@ -1,3 +1,4 @@
+,
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,22 +7,19 @@
 
 	<script>
 		var input = document.getElementsByName('contador')
-
-		var horas = 12
-		var minutos = 30
-		var segundos = 10
-
-		for (x = 60; x >=0; x--) {
-			console.log(segundos)
-			segundos--
-			if(segundos == 0) {
-				segundos == 60
-			}
-		}
+		var d = new Date(),
+			dia = (d.getDate() >= 10) ? d.getDate() : '0'+(d.getDate()).toString(),
+			mes = d.getMonth() + 1,
+			ano = d.getFullYear()
+			data = dia + '/' + mes + '/' + ano
+			hora = d.getHours(),
+			minutos = d.getMinutes(),
+			segundos = d.getSeconds(),
+			horas = hora + ':' + minutos + ':' + segundos
 
 
-
-
+		console.log(horas)	
+		console.log(data)	
 	</script>
 </head>
 <body>
