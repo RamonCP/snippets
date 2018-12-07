@@ -3,3 +3,6 @@ form { width: 500px; margin: 0 auto; background: #fff; padding: 61px 42px; borde
 form label { display: block; margin-bottom: 6px; }
 form input { margin-bottom: 34px; height: 39px; padding-left: 21px; border: none; background: #f5f5f5; width: 100%; }
 button { font-weight: bold; font-size: 18px;color: #fff; border: none; background: #44A705; width: 30%; display: block; text-align: center; padding: 10px 0; border-radius: 5px; }
+form .input_div { position: relative; }
+
+.msg { po }
