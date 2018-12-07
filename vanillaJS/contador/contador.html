@@ -12,7 +12,7 @@
   	<button type="submit" id="btn">Confirmar</button>
 	</form><br>
 	
-	<span class="contagem"></span>
+	<span class="contagem" id="demo"></span>
 	<script>
 		var min = 0, seg = 0, horas = 0
 		document.querySelector('button').addEventListener('click', function(event) {
@@ -53,7 +53,7 @@
 			} else {
 				document.querySelector('.contagem').innerHTML = '00:00:00';
 			}
-		}
+		}	
 	</script>
 </body>
 </html>
