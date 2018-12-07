@@ -1,0 +1,5 @@
+body { background: #e4d5d34f; font-family: arial, sans-serif; }
+form { width: 500px; margin: 0 auto; background: #fff; padding: 61px 42px; border: 1px solid #e8e8e8; border-radius: 7px; }
+form label { display: block; margin-bottom: 6px; }
+form input { margin-bottom: 34px; height: 39px; padding-left: 21px; border: none; background: #f5f5f5; width: 100%; }
+button { font-weight: bold; font-size: 18px;color: #fff; border: none; background: #44A705; width: 30%; display: block; text-align: center; padding: 10px 0; border-radius: 5px; }
