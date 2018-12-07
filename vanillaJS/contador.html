@@ -3,41 +3,52 @@
 <head>
 	<meta charset="utf-8">
 	<title>Contador</title>
-
+	
+	<script></script>
 
 </head>
 <body>
 	<form>
- 		<label>Início: </label><input type="time" name="usr_time" class="inicio"><br>
- 		<label>Fim: </label> <input type="time" name="usr_time" class="fim"><br><br>
+		<label>Horas:</label><input type="text" name="usr_time" class="horas"><br>
+ 		<label>Minutos: </label><input type="text" name="usr_time" class="minutos"><br>
+ 		<label>Segundos: </label> <input type="text" name="usr_time" class="segundos"><br><br>
   	<button type="submit" id="btn">Confirmar</button>
-	</form>
-	<span></span>
+	</form><br>
+	
+	<span class="contagem"></span>
+
 	<script>
+		var min = 0, seg = 0, horas = 0
+		document.querySelector('button').addEventListener('click', function(event) {
+			event.preventDefault()
+			horas = parseInt(document.querySelector('.horas').value)
+			min = parseInt(document.querySelector('.minutos').value)
+			seg = parseInt(document.querySelector('.segundos').value)
+			contador()
+		})    
 
-		document.querySelector('button').addEventListener("click", function(event){
-		    event.preventDefault()
-		    
+		function contador() {
+			if (min > 0 || seg > 0 || horas > 0) {
+				if (seg == 0) {
+					seg = 59
+					min--
+				} else {
+					seg--
+				}
 
-		    var inicio = document.querySelectorAll('input')[0].value
-		    var fim = document.querySelectorAll('input')[1].value
+				if (min.toString().length == 1) {
+					min = "0"+min
+				}
+				if (seg.toString().length == 1) {
+					seg = "0"+seg
+				}
+				tempo = setTimeout("contador()", 1000)
 
-		    inicio = inicio.split(':')
-		    fim = fim.split(':')
-
-
-
-		    console.log('ok')
-		    console.log(inicio[0], fim[0])
-		});
-		
-
-		function serialize() {
+				document.querySelector('.contagem').innerHTML = min + ':' + seg
+			} else {
+				document.querySelector('.contagem').innerHTML = '00:00';
+			}
 		}
-
-
-
-
 	</script>
 </body>
 </html>
