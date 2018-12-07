@@ -5,4 +5,5 @@ form input { margin-bottom: 34px; height: 39px; padding-left: 21px; border: none
 button { font-weight: bold; font-size: 18px;color: #fff; border: none; background: #44A705; width: 30%; display: block; text-align: center; padding: 10px 0; border-radius: 5px; }
 form .input_div { position: relative; }
 
-.msg { po }
+.msg { position: absolute; top: 27px; background: #ffd7e6; color: #f30011c7; font-weight: bold; padding: 8px 20px; right: -211px; border-radius: 5px; }
+.msg:before { content: ''; left: -16px; position: absolute; height: 0; width: 0; border-bottom: 17px solid transparent; border-top: 17px solid transparent; border-right: 20px solid #ffd7e6; top: 0; }
