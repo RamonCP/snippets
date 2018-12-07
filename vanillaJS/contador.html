@@ -1,28 +1,43 @@
-,
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>Contador</title>
 
-	<script>
-		var input = document.getElementsByName('contador')
-		var d = new Date(),
-			dia = (d.getDate() >= 10) ? d.getDate() : '0'+(d.getDate()).toString(),
-			mes = d.getMonth() + 1,
-			ano = d.getFullYear()
-			data = dia + '/' + mes + '/' + ano
-			hora = d.getHours(),
-			minutos = d.getMinutes(),
-			segundos = d.getSeconds(),
-			horas = hora + ':' + minutos + ':' + segundos
 
-
-		console.log(horas)	
-		console.log(data)	
-	</script>
 </head>
 <body>
-	<input type="text" name="contador">
+	<form>
+ 		<label>Início: </label><input type="time" name="usr_time" class="inicio"><br>
+ 		<label>Fim: </label> <input type="time" name="usr_time" class="fim"><br><br>
+  	<button type="submit" id="btn">Confirmar</button>
+	</form>
+	<span></span>
+	<script>
+
+		document.querySelector('button').addEventListener("click", function(event){
+		    event.preventDefault()
+		    
+
+		    var inicio = document.querySelectorAll('input')[0].value
+		    var fim = document.querySelectorAll('input')[1].value
+
+		    inicio = inicio.split(':')
+		    fim = fim.split(':')
+
+
+
+		    console.log('ok')
+		    console.log(inicio[0], fim[0])
+		});
+		
+
+		function serialize() {
+		}
+
+
+
+
+	</script>
 </body>
 </html>
