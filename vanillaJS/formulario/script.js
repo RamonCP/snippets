@@ -1,6 +1,3 @@
-
-
-
 document.querySelector('form').addEventListener('submit', function(e){
 	e.preventDefault()
 
@@ -13,12 +10,23 @@ document.querySelector('form').addEventListener('submit', function(e){
 			
 			var div = document.querySelector("#"+result[i]).parentElement
 
-			var msg = document.createElement('div')
-			var text = document.createTextNode('Preencha o campo '+ result[i])
-			msg.appendChild(text)
-			msg.classList.add('msg')
+			// var msg = document.createElement('div')
+			// var text = document.createTextNode('Preencha o campo '+ result[i])
+			// msg.appendChild(text)
+			// msg.classList.add('msg')
 
-			div.appendChild(msg)
+			// div.appendChild(msg)
+
+			var msg = div.querySelector('.msg')
+			msg.classList.add('active')
+
+			// Se contém
+			if (msg.classList.contains('active')) {
+				console.log('contem ativo')
+
+			} else {
+
+			}
 		}
 
 
@@ -30,6 +38,15 @@ document.querySelector('form').addEventListener('submit', function(e){
 
 	console.log('ok')
 })
+
+
+var inputPress = function () {
+	var msg = document.querySelectorAll('.msg').length;
+	for (i = 0; i < msg; i++) {
+		document.querySelector('.msg').classList.remove('active')
+	}
+}
+
 
 
 var validInput = function (elemento) {
@@ -48,4 +65,5 @@ var validInput = function (elemento) {
 		return false
 	}
 }
+
 

@@ -9,17 +9,20 @@
 		<form>
 			<div class="input_div">
 				<label for="name">Nome:</label>
-				<input type="text" name="nome" class="nome" id="name" placeholder="Digite seu nome"><br>
+				<input type="text" name="nome" class="nome" id="name" onkeypress="inputPress()" placeholder="Digite seu nome"><br>
+				<div class="msg">Preencha o campo nome</div>
 			</div>
 
 			<div class="input_div">
 				<label for="email">Email:</label>
-				<input type="email" name="email" class="email" id="email" placeholder="Digite seu email"><br>
+				<input type="email" name="email" class="email" id="email" onkeypress="inputPress()" placeholder="Digite seu email"><br>
+				<div class="msg">Preencha o campo email</div>
 			</div>
 
 			<div class="input_div">
 				<label for="telefone">Telefone:</label>
-				<input type="tel" name="telefone" class="telefone" id="telefone" placeholder="Digite seu telefone"><br>
+				<input type="tel" name="telefone" class="telefone" id="telefone" onkeypress="inputPress()" placeholder="Digite seu telefone"><br>
+				<div class="msg">Preencha o campo telefone</div>
 			</div>
 			<button>Cadastrar</button>
 		</form>
