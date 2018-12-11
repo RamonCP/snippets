@@ -1,18 +1,18 @@
-// var form = document.querySelector('form'),
-// 	input = document.querySelector('input')
+var form = document.querySelector('form'),
+	input = document.querySelector('input')
 
-// form.addEventListener('submit', function(e) {
-// 	e.preventDefault()
-// 	if ( input.value != "" ) {
-// 		console.log(date())
-// 	} else {
-// 		alert('input vazio')
-// 	}
-// 	console.log('ok')
-// })
+form.addEventListener('submit', function(e) {
+	e.preventDefault()
+	if ( input.value != "" ) {
+		setInterval(date, 1000)
+	} else {
+		alert('input vazio')
+	}
+	console.log('ok')
+})
 
 function date() {
-	var fim = new Date('Jan 01 2019').getTime()
+	var fim = new Date(document.querySelector('input').value).getTime()
 
 	var hoje = new Date().getTime()
 
@@ -26,7 +26,3 @@ function date() {
 	document.querySelector('.hours').innerHTML = dias+' dias '+horas+' horas '+segundos+' segundos'
 
 }
-
-setInterval(date, 1000)
-
-// date()
