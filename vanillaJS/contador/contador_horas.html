@@ -17,9 +17,9 @@
 		var min = 0, seg = 0, horas = 0
 		document.querySelector('button').addEventListener('click', function(event) {
 			event.preventDefault()
-			horas = parseInt(document.querySelector('.horas').value)
-			min = parseInt(document.querySelector('.minutos').value)
-			seg = parseInt(document.querySelector('.segundos').value)
+			horas = Math.abs(parseInt(document.querySelector('.horas').value))
+			min = Math.abs(parseInt(document.querySelector('.minutos').value))
+			seg = Math.abs(parseInt(document.querySelector('.segundos').value))
 			contador()
 		})    
 
