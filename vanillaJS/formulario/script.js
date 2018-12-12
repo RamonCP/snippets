@@ -5,7 +5,7 @@ one('form').addEventListener('submit', function(e){
 
 	if (result.length == 0) {		
 		if(validateEmail(one('#email').value)) {
-
+			alert('Ok')
 		} else {
 			var msg = one('#email').parentElement.querySelector('.msg')
 			msg.innerHTML = "Email inválido" 
@@ -14,9 +14,22 @@ one('form').addEventListener('submit', function(e){
 	} else {
 		
 	}
-
 })
 
+one('#telefone').addEventListener('keyup', function(){
+	setTimeout(mascara(this.value), 1)
+})
+
+
+function mascara(valor) {
+		
+	valor = valor.replace(/\D/g,"")
+	valor = valor.replace(/(\d{2})(\d)/,"($1) $2")
+	valor = valor.replace(/(\d)(\d{4})$/,"$1-$2")
+
+	console.log(valor)
+	one('#telefone').value = valor
+}
 
 function inputPress() {
 	var msg = all('.msg').length;
