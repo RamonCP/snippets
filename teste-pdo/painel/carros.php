@@ -1,7 +1,7 @@
 <?php 
 session_start();
 if(!isset($_SESSION['logado']) && $_SESSION['logado'] != true):
-    header("Location: http://localhost/teste-pdo/painel/login.php");
+    header("Location: http://localhost/snippets/teste-pdo/painel/login.php");
 endif;
 $action = "list";
 // require "code/usuario_controller.php";
@@ -12,7 +12,7 @@ require "code/car_controller.php";
     <script type="text/javascript">
             
             function action(action, id){
-              location.href = "http://localhost/teste-pdo/painel/carros.php?action="+action+"&id="+id;
+              location.href = "http://localhost/snippets/snippets/teste-pdo/painel/carros.php?action="+action+"&id="+id;
             }
 
         </script>

@@ -53,7 +53,7 @@
 	$('input').keyup(function(){
 		var valor  = $(this).val();
 		$.ajax({
-			url: 'http://localhost/teste-pdo/painel/code/car_controller.php?action=busca&val='+valor,
+			url: 'http://localhost/snippets/teste-pdo/painel/code/car_controller.php?action=busca&val='+valor,
 			method: "GET",
 			success: function(response){
 				var dados = JSON.parse(response);

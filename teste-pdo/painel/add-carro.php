@@ -1,7 +1,7 @@
 <?php 
   session_start();
   if(!isset($_SESSION['logado']) && $_SESSION['logado'] != true):
-      header("Location: http://localhost/teste-pdo/painel/login.php");
+      header("Location: http://localhost/snippets/teste-pdo/painel/login.php");
   endif;
 
   include "templates/head.php";

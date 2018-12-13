@@ -1,5 +1,5 @@
 <?php
-  define("BASE_URL", "http://localhost/teste-pdo/");
+  define("BASE_URL", "http://localhost/snippets/teste-pdo/");
 ?>
 <!DOCTYPE html>
 <html lang="en">

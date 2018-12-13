@@ -79,9 +79,9 @@
           success: function(response){
             console.log(response)
             if(response == 1){ 
-              window.location = "http://localhost/teste-pdo/painel/carros.php";
+              window.location = "http://localhost/snippets/teste-pdo/painel/carros.php";
             }else{
-              window.location = "http://localhost/teste-pdo/painel/login.php";                
+              window.location = "http://localhost/snippets/teste-pdo/painel/login.php";                
             }
           }
         })
