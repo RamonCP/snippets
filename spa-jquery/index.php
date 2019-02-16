@@ -4,25 +4,25 @@
 
 		<div id="numbers">
 			<div class="bloco">
-				<img src="imagens/projects-completed-logo.png" class="projlogo">
+				<img src="assets/imagens/projects-completed-logo.png" class="projlogo">
 				<p class="p_num">548</p><br/>
 				<p>projects completed</p>
 			</div>
 
 			<div class="bloco">
-				<img src="imagens/clock_project.png" class="projlogo">
+				<img src="assets/imagens/clock_project.png" class="projlogo">
 				<p class="p_num">1465</p><br/>
 				<p>working hours</p>
 			</div>
 
 			<div class="bloco">
-				<img src="imagens/star_project.png" class="projlogo">
+				<img src="assets/imagens/star_project.png" class="projlogo">
 				<p class="p_num">612</p><br/>
 				<p>positive feedback</p>
 			</div>
 
 			<div class="bloco">
-				<img src="imagens/heart_project.png" class="projlogo">
+				<img src="assets/imagens/heart_project.png" class="projlogo">
 				<p class="p_num">735</p><br/>
 				<p>happy clients</p>
 			</div>
@@ -32,7 +32,7 @@
 			<div class="bloc_1"></div>
 			<div class="bloc_1"></div>
 			<div class="bloc_black">
-				<img src="imagens/eye.png">
+				<img src="assets/imagens/eye.png">
 			</div>
 			<div class="bloc_2"></div>
 		</div>
@@ -50,7 +50,7 @@
 			</div>
 
 			<video width="1168" height="571" controls="controls">
-				<source src="videos/Universidade XTI - JavaScript - 02 - Hello World! (720p_30fps_H264-192kbit_AAC).mp4" type="video/mp4">
+				<source src="assets/videos/Universidade XTI - JavaScript - 02 - Hello World! (720p_30fps_H264-192kbit_AAC).mp4" type="video/mp4">
 			</video>
 		</div>
 

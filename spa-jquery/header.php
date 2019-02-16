@@ -3,15 +3,15 @@
 <head>
 	<meta charset="utf-8">
 	<title>Website</title>
-	<link rel="icon" href="imagens/favicon.ico" />
-	<link rel="stylesheet" type="text/css" href="css/estilo.css">
-	<link rel="stylesheet" type="text/css" href="css/gallery.css">
-	<link rel="stylesheet" type="text/css" href="css/gallery.theme.css">
+	<link rel="icon" href="assets/imagens/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="assets/css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/gallery.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/gallery.theme.css">
 </head>
 <body>
 	<div id="interface">
 		<header id="cabecalho">
-			<img src="imagens/logo.png">
+			<img src="assets/imagens/logo.png">
 			<ul id="menu">
 				<li><a href="#" class="active">Home</a></li>
 				<li><a href="#">About</a></li>

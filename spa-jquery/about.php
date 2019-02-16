@@ -4,7 +4,7 @@
 			   A you under Seed appear which good give. Own give air without fowl moveth dry first 
                heaven fruit, dominion she'd won't very all.
            </p>
-           <img src="imagens/signature.png">
+           <img src="assets/imagens/signature.png">
 		</div>
 
 		<div id="skills">

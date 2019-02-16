@@ -28,18 +28,18 @@
 
 		<div class="clients">
 			<div class="logo">
-				<img src="imagens/logo1.jpg">
+				<img src="assets/imagens/logo1.jpg">
 			</div>
 			<div class="logo">
-				<img src="imagens/logo2.jpg">
+				<img src="assets/imagens/logo2.jpg">
 			</div>
 			<div class="logo">
-				<img src="imagens/logo3.jpg">
+				<img src="assets/imagens/logo3.jpg">
 			</div>
 			<div class="logo">
-				<img src="imagens/logo4.jpg">
+				<img src="assets/imagens/logo4.jpg">
 			</div>
 			<div class="logo">
-				<img src="imagens/logo1.jpg">
+				<img src="assets/imagens/logo1.jpg">
 			</div>
 		</div>
