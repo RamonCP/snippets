@@ -14,7 +14,7 @@
 			<img src="assets/imagens/logo.png">
 			<ul id="menu">
 				<li><a href="#" class="active">Home</a></li>
-				<li><a href="#">About</a></li>
+				<li><a href="about-us.php">About</a></li>
 				<li><a href="#">Work</a></li>
 				<li><a href="#">Process</a></li>
 				<li><a href="#">Services</a></li>

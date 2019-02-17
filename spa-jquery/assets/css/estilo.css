@@ -66,26 +66,26 @@ ul#menu a.active {
 	font-size: 11px;
 }
 
-#about{
+#about, #about-us {
 	height: 421px;
 	background-color: #ffffff;
 	width: 1366px;
 }
 
-#about h1{
+#about h1, #about-us h1{
 	margin: 0 auto;
 	padding-left: 615px;
 	padding-top: 98px;
 }
 
-#about p{
+#about p, #about-us p {
 	margin-left: 396px;
 	text-align: center;
 	color: #787878;
 	width: 578px;
 }
 
-#about img{
+#about img, #about-us img {
 	margin-top: 41px;
 	margin-left: 575px;
 }

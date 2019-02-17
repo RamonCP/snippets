@@ -1,6 +1,11 @@
 <?php include 'header.php' ?>
 
+	<div id="content"></div>
+
+
 	<?php include 'about.php' ?>
+
+
 
 		<div id="numbers">
 			<div class="bloco">
