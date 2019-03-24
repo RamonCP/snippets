@@ -18,10 +18,10 @@ var App = {
 
 // App.ola()
 
-var Pessoa = Object.create(App)
-Pessoa.andar()
-Pessoa.ola("Ramon")
+// var Pessoa = Object.create(App)
+// Pessoa.andar()
+// Pessoa.ola("Ramon")
 
-var Pessoa2 = Object.create(Pessoa)
-Pessoa2.andar()
-Pessoa2.ola("Lucas")
+// var Pessoa2 = Object.create(Pessoa)
+// Pessoa2.andar()
+// Pessoa2.ola("Lucas")
