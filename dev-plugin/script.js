@@ -1,14 +1,24 @@
 $(function(){
     
     $('p.tooltip').meuPlugin({
-        'corDeFundo':'#ff0000',
-        'text': 'Parágrafo criado a partir do meu plugin',
+        estilo: {
+            color:'#ff0000',
+            'font-size': '40px'
+        },
+        text: 'Parágrafo criado a partir do meu plugin',
     });
 
     $('h1.tooltip').meuPlugin({
-        'corDeFundo': '#007eff',
-        'fontSize': '30px',
-        'text': 'h1 dinâmico vindo do plugin :D',
-        'statusClass':'desativado'
+        estilo: {
+            color: '#007eff',
+            'font-size': '30px'
+        },       
+        text: 'h1 dinâmico vindo do plugin :D',
+        statusClass:'desativado'
+    })
+
+    $('h2').meuPlugin({
+        text: 'h2 no centro',
+        statusClass : 'center'
     })
 })

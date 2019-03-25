@@ -4,10 +4,12 @@
 
         // Configuração default
         var defaults = {
-            'corDeFundo':'yellow',
-            'fontSize': '40px',
-            'text': 'Olá mundo',
-            'statusClass': 'active'
+            estilo: {
+                color:'yellow',
+                'font-size': '60px'
+            },          
+            text: 'Olá mundo',
+            statusClass: 'active'
         }
 
         /*  Caso não exista options
@@ -21,10 +23,7 @@
         return this.each(function(){
             //Elemento a ser modificado
             $(this)
-            .css({
-                'color': settings.corDeFundo,
-                'font-size': settings.fontSize
-            })
+            .css(settings.estilo)
             .html(settings.text)
             .addClass(settings.statusClass)
         })
