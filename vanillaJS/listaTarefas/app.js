@@ -8,13 +8,17 @@ function renderLista() {
     lista.innerHTML = ''
 
     for ( item of itemDefault ) {
+        var posicaoDoItemNaLista = itemDefault.indexOf(item)
+
         var li_Element = document.createElement('li')
         var li_ElementText = document.createTextNode(item) 
 
         var linkExcluir = document.createElement('a')
+        linkExcluir.setAttribute('href','#!')
+        linkExcluir.setAttribute('onclick', 'deletarItemLista('+ posicaoDoItemNaLista +')')
+
         var linkExcluirText = document.createTextNode('Excluir')
 
-        linkExcluir.href = '#!'
         linkExcluir.appendChild(linkExcluirText)
 
         li_Element.appendChild(li_ElementText)
@@ -30,10 +34,10 @@ function addItemLista() {
     renderLista()
 }
 
-function excluiItemLista() {
-    console.log('ok')
+function deletarItemLista(posicaoDoItemNaLista) {
+    itemDefault.splice(posicaoDoItemNaLista, 1)
+    renderLista()
 }
 
 renderLista()
 button.onclick = addItemLista
-document.querySelectorAll('#app li a').onclick = excluiItemLista
