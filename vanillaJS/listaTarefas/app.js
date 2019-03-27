@@ -2,7 +2,7 @@ var lista = document.getElementById('app')
 var button = document.querySelector('button')
 var campoTexto = document.querySelector('input')
 
-var itemDefault = [ 'Fazer Café', 'Estudar JavaScript', 'Estudar Inglês' ]
+var itemDefault = JSON.parse(localStorage.getItem('lista_tarefas'))  || [ 'Fazer Café', 'Estudar JavaScript', 'Estudar Inglês' ]
 
 function renderLista() {
     lista.innerHTML = ''
@@ -32,11 +32,17 @@ function addItemLista() {
     itemDefault.push(campoTexto.value)
     campoTexto.value = ''
     renderLista()
+    salvaNoLocalStorage()
 }
 
 function deletarItemLista(posicaoDoItemNaLista) {
     itemDefault.splice(posicaoDoItemNaLista, 1)
     renderLista()
+    salvaNoLocalStorage()
+}
+
+function salvaNoLocalStorage() {
+    localStorage.setItem('lista_tarefas', JSON.stringify(itemDefault))
 }
 
 renderLista()
