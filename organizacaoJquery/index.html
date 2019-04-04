@@ -5,9 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Organização jQuery</title>
+    <link rel="stylesheet" href="../libs/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+        <form method="post">
+            <div class="input-field-box col s12">
+                <div class="input-field col s12">
+                    <input type="text" id="autocomplete-input" name="marca" class="autocomplete">
+                    <input type="hidden" id="cod-marca" value="">
+                    <label for="autocomplete-input">Digite a marca (Ex. Fiat, Volks)</label>
+                </div>
+            </div>
+            <div class="input-field-box col s12">
+                <div class="input-field col s12">
+                    <input type="text" id="autocomplete-input-modelo" name="modelo" class="autocomplete">
+                    <input type="hidden" id="cod-modelo" value="">
+                    <label for="autocomplete-input-modelo">Digite o modelo (Ex. Palio, Gol)</label>
+                </div>
+            </div>
+            <div class="input-field-box col s12">
+                <div class="input-field col s12">
+                    <input type="text" id="autocomplete-input-ano" name="ano" class="autocomplete">
+                    <label for="autocomplete-input-ano">Digite o ano</label>
+                </div>
+            </div>
+            <div class="input-field-box col s12">
+                <div class="input-field col s12">
+                    <label for="txtnome" class="">Insira seu nome</label>
+                    <input id="txtnome" name="nome" type="text" class="input-required">
+                </div>
+            </div>    
+            <div class="input-field-box col s12">
+                <div class="input-field col s12">
+                    <label for="txtemail" class="">Insira seu email</label>
+                    <input id="txtemail" name="email" type="text" class="input-required">
+                </div>
+            </div>  
+            <button>Consultar Valor</button>
+        </form>
+
     <script src="../libs/js/jquery-3.3.1.min.js"></script>
+    <script src="../libs/js/materialize.min.js"></script>
+    <script src="fipeApi.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
