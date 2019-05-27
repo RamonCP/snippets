@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoList">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo list</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+</head>
+<body>
+    <div ng-controller="estadosCapitais">
+        <form ng-submit="addEstadoCapital()">
+            <input type="text" ng-model="estado">
+            <input type="text" ng-model="capital">
+            <input type="submit" value="Incluir">
+        </form>
+        <ul>
+            <li ng-repeat="estado in estados">{{ estado.name }}</li>
+        </ul>
+    </div>
+    <script>
+        const todoList = angular.module('todoList', [])
+
+        
+        todoList.controller('estadosCapitais',function($scope){
+           $scope.estados = [
+               { name: "São Paulo", capital: "São Paulo" }
+           ]
+           
+           $scope.addEstadoCapital = function(){
+               $scope.estados.push({name:$scope.estado, capital: $scope.capital})
+           }
+        })
+
+    </script>
+</body>
+</html>
