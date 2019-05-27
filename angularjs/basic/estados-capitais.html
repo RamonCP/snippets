@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="todoList">
+<html lang="pt-br" ng-app="todoList">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +17,13 @@
         <ul>
             <li ng-repeat="estado in estados">{{ estado.name }}</li>
         </ul>
+
+        <div ng-show="teste">Teste</div>
+
+        <button ng-click="addContador()">Incrementa contador</button>
+
+        <div ng-show="contador > 5">{{ contador }}</div> 
+
     </div>
     <script>
         const todoList = angular.module('todoList', [])
@@ -29,7 +36,17 @@
            
            $scope.addEstadoCapital = function(){
                $scope.estados.push({name:$scope.estado, capital: $scope.capital})
+               $scope.estados = ''
+               $scope.capital = ''
            }
+
+           $scope.addContador = function(){
+               $scope.contador++
+           }
+
+           $scope.teste = true
+           $scope.contador = 0
+
         })
 
     </script>
