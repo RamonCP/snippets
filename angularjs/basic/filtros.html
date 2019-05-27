@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="filtrosApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filtros</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+</head>
+<body ng-controller="filtroController">
+
+    <h4>Data: {{ dataHoje | date: 'dd/MM/yyyy H:m'  }}hrs</h4>
+
+    <p>Filtro: <input type="text" ng-model="filtro"></p>
+
+    <ul>
+        <li ng-repeat="estado in estados | orderBy: 'name' | filter: filtro">
+            Estado: {{ estado.name | uppercase }} - Capital: {{ estado.capital | lowercase }} - Renda: {{ estado.renda | currency: 'R$ ' }}
+        </li>
+    </ul>
+
+    <p>{{ textoLimitado | limitTo: 100 }}...</p>
+
+    <p>Texto Limitado com uppercase : <br>{{ textoLimitado | limitTo: 100 | uppercase }}</p>
+    
+    <script>
+        const filtrosApp = angular.module('filtrosApp',[])
+
+        filtrosApp.controller('filtroController',function($scope){
+            $scope.estados = [
+                { name: "São Paulo", capital: "São Paulo", renda: 2999 },
+                { name: "Rio de Janeiro", capital: "Rio de Janeiro", renda: 2599.99 },
+                { name: "Minas Gerais", capital: "Belo Horizonte", renda: 2000 },
+                { name: "Santa Catarina", capital: "Florianópolis", renda: 3299.99 }
+            ]
+
+            $scope.dataHoje = new Date()
+            $scope.filtro = ""
+            $scope.textoLimitado = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repellendus eum 
+    explicabo sunt eos nostrum dolor dicta placeat aspernatur quis, dolorem voluptates?
+    Quibusdam voluptatem quae, facilis debitis amet velit porro?`
+        })
+    </script>
+</body>
+</html>
