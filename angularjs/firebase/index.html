@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUD Firebase</title>
+</head>
+<body ng-app="app">
+
+    <div ng-view></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    <script src="app.js"></script>  
+    
+    
+    
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+    const apiKey = []
+
+    fetch('./credentials/apiKey.json')
+        .then(response => response.json())
+        .then(data => apiKey.push(data.apiKey))
+
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: apiKey[0],
+        authDomain: "crud-angularjs-b2078.firebaseapp.com",
+        databaseURL: "https://crud-angularjs-b2078.firebaseio.com",
+        projectId: "crud-angularjs-b2078",
+        storageBucket: "crud-angularjs-b2078.appspot.com",
+        messagingSenderId: "402052438737",
+        appId: "1:402052438737:web:71141b23586ecc4d"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+    <script>
+        
+    </script>
+</body>
+</html>
