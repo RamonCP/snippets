@@ -1,3 +1,2 @@
 # Snippets
-
-Uma série de exemplos, scripts, e coisas úteis que podem ajudar no dia a dia.
+A bunch examples, utilities and scripts that can help my day to day.
