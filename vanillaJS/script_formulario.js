@@ -2,7 +2,6 @@ function checkNull(dado, id, msg) {
 
     if (dado == "") {
 
-        // document.getElementById(id).value = "Preencha o campo.";
         alert(msg +" "+ id);
         return false;
     }
@@ -12,10 +11,13 @@ function checkNull(dado, id, msg) {
 function enviar() {
         
     var data = [];
-    data.push(document.getElementById("nome").value,document.getElementById("tipoLog").value,document.getElementById("endereco").value,
-    document.getElementById("numero").value,document.getElementById("bairro").value,
-    document.getElementById("cidade").value,document.getElementById("state").value,
-    document.getElementById("premio").value);
+    data.push(
+        document.getElementById("nome").value,document.getElementById("tipoLog").value,
+        document.getElementById("endereco").value,
+        document.getElementById("numero").value,document.getElementById("bairro").value,
+        document.getElementById("cidade").value,document.getElementById("state").value,
+        document.getElementById("premio").value
+    );
     
     var list = [];
     list.push("nome","tipoLog","endereco","numero","bairro","cidade","state","premio");
