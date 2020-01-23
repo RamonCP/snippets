@@ -2,20 +2,18 @@ var lista = document.getElementById('app')
 var button = document.querySelector('button')
 var campoTexto = document.querySelector('input')
 
-var itemDefault = JSON.parse(localStorage.getItem('lista_tarefas'))  || [ 'Fazer Café', 'Estudar JavaScript', 'Estudar Inglês' ]
+var itemDefault = (JSON.parse(localStorage.getItem('lista_tarefas')).length > 0) ? JSON.parse(localStorage.getItem('lista_tarefas')) : [ 'Fazer Café', 'Estudar JavaScript', 'Estudar Inglês' ]
 
 function renderLista() {
     lista.innerHTML = ''
 
-    for ( item of itemDefault ) {
-        var posicaoDoItemNaLista = itemDefault.indexOf(item)
-
+    for ( const i in itemDefault ) {
         var li_Element = document.createElement('li')
-        var li_ElementText = document.createTextNode(item) 
+        var li_ElementText = document.createTextNode(itemDefault[i]) 
 
         var linkExcluir = document.createElement('a')
         linkExcluir.setAttribute('href','#!')
-        linkExcluir.setAttribute('onclick', 'deletarItemLista('+ posicaoDoItemNaLista +')')
+        linkExcluir.setAttribute('onclick', 'deletarItemLista('+ i +')')
 
         var linkExcluirText = document.createTextNode('Excluir')
 
