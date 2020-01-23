@@ -1,0 +1,26 @@
+[
+	{
+		"nome":"Breadstick Pepperoni",
+		"unidades":"8 unidades",
+		"imagem":"images/BreadsticksPepperoni.png",
+		"descricao":"Palitos da verdadeira massa Pan recheados com Pepperoni Sadia assados na hora e servidos com molho cheddar.",
+		"preco":"18,90",
+		"valor":"18.90"
+ 	},
+ 	{
+		"nome":"Hut Wings",
+		"unidades":"12 unidades",
+		"imagem":"images/PH_ChikenWings.png",
+		"descricao":"Saborosas e tenras coxinhas de asas de frango, marinadas no verdadeiro molho BBQ, assadas cuidadosamente.",
+		"preco":"29,90",
+		"valor":"29.90"
+ 	},
+ 	{
+		"nome":"Hut Wings",
+		"unidades":"6 unidades",
+		"imagem":"images/PH_ChikenWings.png",
+		"descricao":"Saborosas e tenras coxinhas de asas de frango, marinadas no verdadeiro molho BBQ, assadas cuidadosamente.",
+		"preco":"18,90",
+		"valor":"18.90"
+ 	}
+]
