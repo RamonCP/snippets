@@ -1,18 +1,19 @@
 const urlApi = 'https://api.github.com/users/ramoncp/repos'
 
 function getUsers(){
-    console.log(urlApi)
     return fetch(urlApi)
 }
 
 const users = getUsers()
 users
-    .then((response)=>{
+    .then((response) => {
         if ( response.ok ) {
-            console.log(response)
-            return 
+            return response.json()
         }
         throw new Error(response.statusText)
+    })
+    .then((response)=>{
+        console.log(response)
     })
     .catch((err) => {
         console.error(err)
