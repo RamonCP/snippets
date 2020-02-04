@@ -6,15 +6,15 @@ function getUsers(){
 
 const users = getUsers()
 users
-    .then((response) => {
-        if ( response.ok ) {
-            return response.json()
-        }
-        throw new Error(response.statusText)
-    })
+    .then(handleErrors)
     .then((response)=>{
         console.log(response)
     })
     .catch((err) => {
         console.error(err)
     })
+
+function handleErrors(response){
+    if ( !response.ok ) throw Error(response.statusText)
+    return response.json()
+}
