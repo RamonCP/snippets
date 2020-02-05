@@ -1,0 +1,34 @@
+.container {
+    width: 500px;
+    height: 300px;
+    margin: 40px auto;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    align-content: center;
+}
+
+.item {
+    width: 180px;
+    height: 80px;
+    background-color: bisque;
+    border: 1px solid #000;
+}
+
+.item1 {
+    flex-shrink: 3;
+}
+
+.item2 {
+    flex-grow: 3;
+}
+
+.item3 {
+
+}
+
+.item4 {
+
+}
